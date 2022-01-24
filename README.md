@@ -4,6 +4,8 @@ A fork that tries to keep up with upstream Caddy-l4 development. My main reason 
 
 I believe that Caddy-l4 can be a great self-hosted community tool if it's a bit more approachable/easy. Supplying a Dockerfile and some Compose examples coupled with some Docker Images will bring more people in contact with Caddy-l4. 
 
+Some usecases: Fowarding DNS, forwarding specific ports through a Wireguard Tunnel, exposing your Minecraft server to a VPS.  
+
 Project Conncept: a TCP/UDP app for Caddy
 =======================================
 
