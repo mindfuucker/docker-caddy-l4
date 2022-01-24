@@ -1,4 +1,10 @@
-Project Concept: a TCP/UDP app for Caddy
+Docker Caddy-l4
+=======================================
+A fork that tries to keep up with upstream Caddy-l4 development. My main reason to fork this is to get some hands-on experience with Dockerfiles and releases on Dockerhub / Github containers. 
+
+I believe that Caddy-l4 can be a great self-hosted community tool if it's a bit more approachable/easy. Supplying a Dockerfile and some Compose examples coupled with some Docker Images will bring more people in contact with Caddy-l4. 
+
+Project Conncept: a TCP/UDP app for Caddy
 =======================================
 
 **Project Conncept** is an experimental layer 4 app for Caddy. It facilitates composable handling of raw TCP/UDP connections based on properties of the connection or the beginning of the stream.
