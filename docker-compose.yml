@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  caddy:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./caddy:/etc/caddy
