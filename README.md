@@ -1,4 +1,4 @@
-Project Conncept: a TCP/UDP app for Caddy
+Project Concept: a TCP/UDP app for Caddy
 =======================================
 
 **Project Conncept** is an experimental layer 4 app for Caddy. It facilitates composable handling of raw TCP/UDP connections based on properties of the connection or the beginning of the stream.
