@@ -27,7 +27,12 @@ import (
 
 // Server represents a Caddy layer4 server.
 type Server struct {
-	Listen []string  `json:"listen,omitempty"`
+	// The network address to bind to. Any Caddy network address
+	// is an acceptable value:
+	// https://caddyserver.com/docs/conventions#network-addresses
+	Listen []string `json:"listen,omitempty"`
+
+	// Routes express composable logic for handling byte streams.
 	Routes RouteList `json:"routes,omitempty"`
 
 	logger        *zap.Logger
@@ -124,6 +129,11 @@ func (pc packetConn) Read(b []byte) (n int, err error) {
 
 func (pc packetConn) Write(b []byte) (n int, err error) {
 	return pc.PacketConn.WriteTo(b, pc.addr)
+}
+
+func (pc packetConn) Close() error {
+	// Do nothing, we don't want to close the UDP server
+	return nil
 }
 
 func (pc packetConn) RemoteAddr() net.Addr { return pc.addr }
